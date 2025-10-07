@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "CVA",
-  description: "Site rápido e bonito com Next.js + Bootstrap",
+  description: "Centro de Validação Alimentícia",
 };
 
 export default function RootLayout({ children }) {

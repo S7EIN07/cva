@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Meu Site com Bootstrap",
+  title: "CVA",
   description: "Site rápido e bonito com Next.js + Bootstrap",
 };
 

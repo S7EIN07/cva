@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
           fontSize: 17,
         ),
         selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Colors.white,
         items: const [
           BottomNavigationBarItem(icon: SizedBox(height: 0), label: "Produtos"),
           BottomNavigationBarItem(

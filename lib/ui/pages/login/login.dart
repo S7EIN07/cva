@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Perfil extends StatefulWidget {
-  const Perfil({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
   @override
-  State<Perfil> createState() => _PerfilState();
+  State<Login> createState() => _LoginState();
 }
 
-class _PerfilState extends State<Perfil> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(body: Center(child: Text('Hello World!')));

@@ -1,6 +1,8 @@
-import 'package:cva/ui/pages/cadastro/cadastro.dart';
+import 'package:cva/ui/pages/cadastroProduto/cadastroProduto.dart';
+import 'package:cva/ui/pages/login/login.dart';
 import 'package:cva/ui/pages/perfil/perfil.dart';
 import 'package:cva/ui/pages/produtos/produtos.dart';
+import 'package:cva/ui/pages/registerUser/registerUser.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -23,7 +25,7 @@ class _HomeState extends State<Home> {
     setState(() => _paginaAtual = index);
     _pageController.animateToPage(
       index,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
   }
@@ -32,32 +34,75 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF198754),
-        title: Text("CVA", style: TextStyle(color: Colors.white)),
-        centerTitle: true,
+        backgroundColor: const Color(0xFF198754),
+        elevation: 0,
+
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: Image.asset('assets/img/logo.png', height: 30),
+        ),
+        title: const Text(
+          "CVA",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            fontSize: 20,
+          ),
+        ),
+        centerTitle: false,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.notifications_none, color: Colors.white),
+            onPressed: () {},
+          ),
+          const SizedBox(width: 10),
+        ],
       ),
       body: PageView(
         controller: _pageController,
         onPageChanged: (index) => setState(() => _paginaAtual = index),
-        children: [Produtos(), CadastroProduto(), Perfil()],
+        children: [
+          const Produtos(),
+          const CadastroProdutoPage(),
+          const Perfil(),
+        ],
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _paginaAtual,
         onTap: _mudarPagina,
-        backgroundColor: const Color(0xFF198754),
+
+        backgroundColor: Colors.white,
+        elevation: 10,
+
+        selectedItemColor: const Color(0xFF198754),
+        unselectedItemColor: Colors.grey[500],
+        type: BottomNavigationBarType.fixed,
         selectedLabelStyle: const TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 17,
+          fontSize: 12,
         ),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
-        items: const [
-          BottomNavigationBarItem(icon: SizedBox(height: 0), label: "Produtos"),
+        unselectedLabelStyle: const TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 12,
+        ),
+
+        items: [
           BottomNavigationBarItem(
-            icon: SizedBox(height: 0),
-            label: "Cadastrar",
+            icon: Icon(Icons.storefront_outlined, size: 28),
+            activeIcon: Icon(Icons.storefront, size: 28),
+            label: 'Produtos',
           ),
-          BottomNavigationBarItem(icon: SizedBox(height: 0), label: "Perfil"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_circle_outline, size: 28),
+            activeIcon: Icon(Icons.add_circle, size: 28),
+            label: 'Cadastrar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline, size: 28),
+            activeIcon: Icon(Icons.person, size: 28),
+            label: 'Perfil',
+          ),
         ],
       ),
     );

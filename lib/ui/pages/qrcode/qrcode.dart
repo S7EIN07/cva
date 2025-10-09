@@ -142,8 +142,7 @@ class _QrcodeState extends State<Qrcode> {
 
         // 2. Define a URL de rastreamento/detalhes
         // A URL agora usa o ID obtido
-        final productUrl =
-            "http://seuapp.com/detalhes?id=$productId&nome=$nomeProduto";
+        final productUrl = "http://seuapp.com/detalhes?id=$productId";
 
         setState(() {
           qrText = productUrl;

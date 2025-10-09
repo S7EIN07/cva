@@ -35,6 +35,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF198754),
+        leading: null,
         elevation: 0,
         title: Padding(
           padding: const EdgeInsets.only(left: 10.0),

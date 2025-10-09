@@ -103,8 +103,7 @@ class _RegistroPageState extends State<RegistroPage> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Image.asset('assets/img/logo.png', height: 100),
-                        SizedBox(height: 20),
+                        Image.asset('assets/img/logo.png', height: 125),
                         TextFormField(
                           controller: _usernameController,
                           decoration: InputDecoration(

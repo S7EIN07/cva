@@ -30,5 +30,6 @@ flutter:
 
   assets:
   - assets/img/logo.png
+  - assets/img/logo_branca.png
   - assets/img/selo_normal.png
   - assets/img/selo_verificado.png

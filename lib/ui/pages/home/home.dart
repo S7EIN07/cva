@@ -36,27 +36,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF198754),
         elevation: 0,
-
-        leading: Padding(
+        title: Padding(
           padding: const EdgeInsets.only(left: 10.0),
-          child: Image.asset('assets/img/logo_branca.png', height: 30),
+          child: Image.asset('assets/img/logo_branca.png', height: 75),
         ),
-        title: const Text(
-          "CVA",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-          ),
-        ),
-        centerTitle: false,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_none, color: Colors.white),
-            onPressed: () {},
-          ),
-          const SizedBox(width: 10),
-        ],
+        centerTitle: true,
       ),
       body: PageView(
         controller: _pageController,

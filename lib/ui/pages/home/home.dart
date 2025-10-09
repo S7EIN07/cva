@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
 
         leading: Padding(
           padding: const EdgeInsets.only(left: 10.0),
-          child: Image.asset('assets/img/logo.png', height: 30),
+          child: Image.asset('assets/img/logo_branca.png', height: 30),
         ),
         title: const Text(
           "CVA",
